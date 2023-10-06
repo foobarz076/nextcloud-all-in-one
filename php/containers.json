@@ -229,8 +229,12 @@
       "display_name": "Notify Push",
       "image": "nextcloud/aio-notify-push",
       "init": true,
-      "expose": [
-        "7867"
+      "ports": [
+        {
+          "ip_binding": "",
+          "port_number": "7867",
+          "protocol": "tcp"
+        }
       ],
       "internal_port": "7867",
       "secrets": [
@@ -298,8 +302,12 @@
       "display_name": "Collabora",
       "image": "nextcloud/aio-collabora",
       "init": true,
-      "expose": [
-        "9980"
+      "ports": [
+        {
+          "ip_binding": "",
+          "port_number": "9980",
+          "protocol": "tcp"
+        }
       ],
       "internal_port": "9980",
       "environment": [
@@ -337,6 +345,11 @@
         {
           "ip_binding": "",
           "port_number": "%TALK_PORT%",
+          "protocol": "udp"
+        },
+        {
+          "ip_binding": "",
+          "port_number": "8081",
           "protocol": "udp"
         }
       ],
@@ -556,8 +569,12 @@
       "display_name": "OnlyOffice",
       "image": "nextcloud/aio-onlyoffice",
       "init": true,
-      "expose": [
-        "80"
+      "ports": [
+        {
+          "ip_binding": "",
+          "port_number": "80",
+          "protocol": "tcp"
+        }
       ],
       "internal_port": "80",
       "environment": [
